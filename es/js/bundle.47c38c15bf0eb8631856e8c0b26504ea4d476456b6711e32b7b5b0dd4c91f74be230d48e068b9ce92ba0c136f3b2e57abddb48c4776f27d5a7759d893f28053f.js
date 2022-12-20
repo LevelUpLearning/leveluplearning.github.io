@@ -8,18 +8,18 @@ const scaleImageClass = 'image-scale';
 const pageHasLoaded = 'DOMContentLoaded';
 const imageAltClass = 'img_alt'
 
-const baseURL = 'https://example.com/';
+const baseURL = 'https://leveluplearning.github.io';
 const searchFieldClass = '.search_field';
 const searchClass = '.search';
 const goBackClass = 'button_back';
 const lineClass = '.line';
 
 // defined in i18n / translation files
-const quickLinks = 'Results';
-const searchResultsLabel = 'Search Results';
-const shortSearchQuery = 'Query is too short'
-const typeToSearch = 'Type to search';
-const noMatchesFound = 'No results found';
+const quickLinks = 'Resultados';
+const searchResultsLabel = 'Resultados de búsqueda';
+const shortSearchQuery = 'La consulta es demasiado corta'
+const typeToSearch = 'Escriba para buscar';
+const noMatchesFound = 'No se encontraron resultados';
 
 ;
 // global variables
