@@ -1,0 +1,61 @@
+
+{{ define "left_bar" }}
+<div class="left-bar">
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="{{ .Section | relLangURL }}" data-filter="all">{{ with .Site.GetPage .Section }}{{ .Title }}{{ end }}
+            </a></li>
+            <div class="subtree">
+                {{ partial "navigators/sidebar.html" (dict "menuName" "sidebar" "menuItems" site.Menus.sidebar "ctx" .) }}
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}
+
+{{ define "main" }}
+  {{- $s := .Site.Params }}
+  {{- $p := .Params }}
+  {{- $scratch := newScratch }}
+  {{- if isset $p "image" }}
+    {{- $scratch.Set "image" $p.image }}
+  {{- else }}
+    {{ $scratch.Set "image" $s.fallBackOgImage }}
+  {{- end }}
+  {{- $image := $scratch.Get "image" }}
+  {{- $bg := absLangURL (path.Join "images" $image) }}
+<article class="post_docs">
+  {{- $t := .Title }}
+    <h1 class="post_title">{{ $t | markdownify }}</h1>
+    {{- partial "post-meta" . }}
+    {{- with .Params.featureImage -}}
+      <div class="post_featured">
+        {{- partial "image" (dict "file" $p.featureImage "alt" $p.featureImageAlt "cap" $p.featureImageCap "type" "featured" "Page" $.Page) }}
+      </div>
+    {{- end -}}
+    
+    <div class="post_body">
+      {{- .Content }}
+    </div>
+</article>
+
+{{ end }}
+
+{{ define "table_of_content"}}
+
+<div class="tabla-contenido">
+  {{ if .Params.toc }}
+    <div class="post_toc">
+      <h3> Contenido </h3>
+      <hr>
+      {{ .TableOfContents }}
+    </div>
+  {{ end }}
+</div>
+{{ end }}

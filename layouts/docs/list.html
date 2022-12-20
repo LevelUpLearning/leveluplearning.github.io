@@ -1,0 +1,39 @@
+
+{{ define "left_bar" }}
+<div class="left-bar">
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="{{ .Section | relLangURL }}" data-filter="all">{{ with .Site.GetPage .Section }}{{ .Title }}{{ end }}
+            </a></li>
+            <div class="subtree">
+                {{ partial "navigators/sidebar.html" (dict "menuName" "sidebar" "menuItems" site.Menus.sidebar "ctx" .) }}
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}
+
+{{ define "main" }}
+  <div class="container_list">
+    <div class="card-container">
+        {{ $posts := where .RegularPagesRecursive "Layout" "!=" "search" }}
+        {{ $paginator := .Paginate $posts 12 }}
+        {{ range $paginator.Pages }}
+          
+            {{ partial "cards/post.html" . }}
+        {{ end }}  
+    </div>
+  </div>
+
+{{ end }}
+
+{{ define "table_of_content"}}
+
+{{ end }}
+

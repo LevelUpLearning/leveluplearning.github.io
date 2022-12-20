@@ -1,0 +1,49 @@
+{{- $s := site.Params }}
+{{- $p := .Params }}
+{{- $codeBlockConfig := partial "func/getCodeBlockSettings" . }}
+<!DOCTYPE html>
+<html
+  lang="{{ .Lang }}"
+  data-figures="{{ $p.figurePositionShow }}"
+  {{ if .IsPage }}
+    class="page"
+  {{ else if .IsHome }}
+    class="home"
+  {{ end }}
+  {{ with $s.enforceLightMode }}
+    data-mode="lit"
+  {{ end }}
+  {{ with $s.enforceDarkMode }}
+    data-mode="dim"
+  {{ end -}}
+>
+  <head>
+    {{- partial "head" . }}
+    {{- partial "hooks/head-end" . }}
+    <link rel="stylesheet" href="{{ "/css/layouts/list.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "/css/navigators/sidebar.css" | relURL}}">
+    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}"/>
+  </head>
+
+
+  <body data-code="{{ $codeBlockConfig.max }}"
+  data-lines="{{ $codeBlockConfig.lines }}"
+  id="documentTop"
+  data-lang="{{ .Lang }}" >
+  
+  {{- partial "header" . }}
+   
+    <section class="tres-columnas">
+      {{ block "left_bar" . }} {{ end }}
+      {{ block "main" . }} {{ end }}
+      {{ block "table_of_content" . }} {{ end }}
+     
+    </section>
+
+  </body>
+  {{- partialCached "icons" . }}
+    {{- partialCached "footer" . }}
+    {{- partialCached "scripts" . }}
+    {{- partialCached "hooks/body-end" . }}
+    {{ block "script" . }} {{ end }}
+</html>
