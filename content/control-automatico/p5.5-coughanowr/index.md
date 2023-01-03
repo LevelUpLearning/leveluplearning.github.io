@@ -17,7 +17,6 @@ menu:
 ---
 ## Problema 5.5 (Process Systems Analysis and Control - Coughanowr, LeBlanc)
 
-
 Considere el tanque agitado mostrado en la figura. La reacción que ocurrre es:
 
 $$

@@ -256,19 +256,25 @@ $$
 H_1(t)=MR_1\left(1-e^{-t/\tau}\right)
 $$
 
-Sabemos que cuando $H_1(t\to\infty)=MR_1$ corresponde al cambio total. Nos piden hallar $t_{90\%}$ sabiendo que $H(t_{90\%})= 0.9MR_1$. Reemplazando en la ecuación anterior
+Sabemos que cuando $H_1(t\to\infty)=MR_1$ corresponde al cambio total. Nos piden hallar $t_{90\\%}$. Sabiendo que $H(t_{90\\%})= 0.9MR_1$. Reemplazando en la ecuación anterior
 
-$$
-0.9MR_1=MR_1\left(1-e^{-t_{90\%}/\tau}\right)
-$$
+<div>
+  $$
+  0.9MR_1=MR_1\left(1-e^{-t_{90\%}/\tau}\right)
+  $$
+</div>
 
-$$
-t_{90\%}=\frac{ln(10)}{\tau}
-$$
+<div>
+  $$
+  t_{90\%}=\frac{ln(10)}{\tau}
+  $$
+</div>
 
-$$
-\mathbf{t_{90\%}=0.6744 \textbf{ min}}
-$$
+<div>
+  $$
+  \mathbf{t_{90\%}=0.6744 \textbf{ min}}
+  $$
+</div>
 
 ## Referencias
 

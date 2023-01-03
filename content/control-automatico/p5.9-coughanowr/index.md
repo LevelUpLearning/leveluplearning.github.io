@@ -71,12 +71,11 @@ $$
 Despejando y sabiendo que $\tau=AR$
 
 $$
-
-\frac{H(s)}{Q(s)}=\frac{R}{ARs+1} \\
+\frac{H(s)}{Q(s)}=\frac{R}{ARs+1} 
 $$
-$$
-\frac{H(s)}{Q(s)}=\frac{R}{\tau s+1} \\
 
+$$
+\frac{H(s)}{Q(s)}=\frac{R}{\tau s+1} 
 $$
 
 Reemplazando los valores $\tau = 1$ y $R=0.5$
@@ -103,7 +102,7 @@ Expresando la misma función con impulsos unitarios y aplicando la transformada 
 
 $$
 \begin{array}{l}
-Q(t) = 1 \cdot \delta (t) + 2 \cdot \delta (t-1) \space\space\space\space //L\{\space\}\\
+Q(t) = 1 \cdot \delta (t) + 2 \cdot \delta (t-1) \space\space\space\space //L\ (\ ) \\
 Q(s) = 1 + 2\cdot e^{-s}\cdot L\{ \delta (t) \}\\
 Q(s) = 1 + 2 \cdot e^{-s}
 \end{array}

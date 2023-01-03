@@ -72,35 +72,43 @@ $$
 
 Restado (1) y (2) y adecuando la ecuación para cambiar a variables desviación
 
-$$
-V\frac{d(C_A-C_{As})}{dt}=q\left[(C_{Ai}-C_{Ais})-(C_A-C_{As})\right]-V\left[k(T)C_A-k(T_s)C_{As}\right]
-$$
+<div>
+  $$
+  V\frac{d(C_A-C_{As})}{dt}=q\left[(C_{Ai}-C_{Ais})-(C_A-C_{As})\right]-V\left[k(T)C_A-k(T_s)C_{As}\right]
+  $$
+</div>
 
 Conviertiendo a variables desviación
 
-$$
-V\frac{dC'_A}{dt}=q(C'_{Ai}-C'_A)-V(k(T)C_A-k(T_s)C_{As}) \space\space\space\space\textbf{...(3)}
-$$
+<div>
+  $$
+  V\frac{dC'_A}{dt}=q(C'_{Ai}-C'_A)-V(k(T)C_A-k(T_s)C_{As}) \space\space\space\space\textbf{...(3)}
+  $$
+</div>
 
 Linealizando la expresión $k = k_0e^{E_R/T}$ usando la aproximaciones en series de taylor al rededor del el punto del estado estacionario.
 
-$$
-f(x,y)=f(x_s,y_s)+\frac{df}{dx}\bigg|_{x=x_s}(x-x_s)+\frac{df}{dy}\bigg|_{y=y_s}(y-y_s)
-$$
+<div>
+  $$
+  f(x,y)=f(x_s,y_s)+\frac{df}{dx}\bigg|_{x=x_s}(x-x_s)+\frac{df}{dy}\bigg|_{y=y_s}(y-y_s)
+  $$
+</div>
 
 Reemplazando con $f(T,C_A)=k(T)\cdot C_A$ con $k(T) = k_0e^{-E_R/T}$ y $T$, $C_A$ como variables independientes
 
-$$
-\frac{df}{dT}\bigg|_{T=T_s, C_A=C_{As}}= \frac{k_0E_R}{T_s^2}e^{-E_R/T_s}C_{As}
-$$
+<div>
+  $$
+  \frac{df}{dT}\bigg|_{T=T_s, C_A=C_{As}}= \frac{k_0E_R}{T_s^2}e^{-E_R/T_s}C_{As}
+  $$
+</div>
+
+<div>
+  $$
+  \frac{df}{dC_{A}}\bigg|_{T=T_s, C_A=C_{As}}= k_0e^{-E_R/T_s}
+  $$
+</div>
 
 $$
-\frac{df}{dC_{A}}\bigg|_{T=T_s, C_A=C_{As}}= k_0e^{-E_R/T_s}
-\\
-$$
-
-$$
-\\
 k(T)C_A = k(T_s)C_{As}+\frac{k_0E_R}{T_s^2}e^{-E_R/T_s}C_{As}(T-T_s)+ k_0e^{-E_R/T_s}(C_A-C_{As})
 $$
 
@@ -147,32 +155,41 @@ $$
 
 Reemplazando en la ecuación (3) y reemplazando datos conocidos
 
+<div>
+  $$
+  V\frac{dC'_A}{dt}=q(C'_{Ai}-C'_A)-V(k(T)C_A-k(T_s)C_{As})
+  $$
+</div>
 
-$$
-V\frac{dC'_A}{dt}=q(C'_{Ai}-C'_A)-V(k(T)C_A-k(T_s)C_{As})
-$$
-
-$$
-V\frac{dC'_A}{dt}=q(C'_{Ai}-C'_A)-V(0.008485T'+12.2025C'_A)
-$$
-
-$$
-13.369\frac{dC'_A}{dt}=2.6738(C'_{Ai}-C'_A)-13.369(0.008485T'+12.2025C'_A)
-$$
-
-$$
-13.3690\frac{dC'_{A}}{dt}=2.6738(C'_{Ai}-C'_A)-0.11343 T'-163.1352C'_A
-$$
+<div>
+  $$
+  V\frac{dC'_A}{dt}=q(C'_{Ai}-C'_A)-V(0.008485T'+12.2025C'_A)
+  $$
+</div>  
+<div>
+  $$
+  13.369\frac{dC'_A}{dt}=2.6738(C'_{Ai}-C'_A)-13.369(0.008485T'+12.2025C'_A)
+  $$
+</div>
+<div>  
+  $$
+  13.3690\frac{dC'_{A}}{dt}=2.6738(C'_{Ai}-C'_A)-0.11343 T'-163.1352C'_A
+  $$
+</div>
 
 Aplicando la transformada de Laplace y ordenando
 
-$$
-13.369sC'_A(s)=2.6738C'_{Ai}(s)-0.11343T'(s)-165.809C'_A(s)
-$$
+<div>
+  $$
+  13.369sC'_A(s)=2.6738C'_{Ai}(s)-0.11343T'(s)-165.809C'_A(s)
+  $$
+</div>
 
-$$
-C'_A(s) = \frac{2.6738C'_{Ai}(s)-0.11343T'(s)}{13.369s+165.809}\space\space\textbf{ ... (6)}
-$$
+<div>
+  $$
+  C'_A(s) = \frac{2.6738C'_{Ai}(s)-0.11343T'(s)}{13.369s+165.809}\space\space\textbf{ ... (6)}
+  $$
+</div>
 
 Realizando el balance de energía del sistema
 
@@ -192,9 +209,11 @@ $$
 
 Restando ambas ecuaciones y expresando en variables desviación
 
-$$
-\rho V C_p \frac{dT'}{dt}=q\rho C_p(T'_i-T')+V\Delta H_R(k(T)C_A - k(T_s)C_{As})
-$$
+<div>
+  $$
+  \rho V C_p \frac{dT'}{dt}=q\rho C_p(T'_i-T')+V\Delta H_R(k(T)C_A - k(T_s)C_{As})
+  $$
+</div>
 
 Reemplazando la ecuación (5) y reemplazando valores conocidos
 
@@ -209,7 +228,17 @@ $$
 556.1504\frac{dT'}{dt}=111.2300(T'_i-T')+53.7645T'+77315.2633C'_A
 $$
 
-Observando la ecuación y revisando el enunciado no pide hallar la función transferencia que relaciona la temperatura con la concentración de entrada es decir $T'(s)/C'_{Ai}$, y no indica una variación en la temperatura de entrada $T_i$ al no existir variación en la temperatura $T_i$ la variable desviación es $T'_i = T_i-T_{is}=T_{is}-T_{is}=0$.
+Observando la ecuación y revisando el enunciado no pide hallar la función transferencia que relaciona la temperatura con la concentración de entrada es decir $T'(s)/C'_{Ai}$, 
+
+y no indica una variación en la temperatura de entrada $T_i$ al no existir variación en la temperatura $T_i$ 
+
+la variable desviación es 
+
+<div>
+$$
+T'_i = T_i-T_{is} = T_{is}-T_{is}=0
+$$
+</div>.
 
 Por lo que nuestra ecuación anterior se simplifica a:
 

@@ -3,7 +3,7 @@ title: Un calentador que deja de funcionar
 author: Ever Vino
 date: 2022-10-14
 tags: [control automatico]
-
+toc: true
 thumbnail: ./headercontrol51.png
 featureImage: "./headercontrol51.png"
 usePageBundles: true

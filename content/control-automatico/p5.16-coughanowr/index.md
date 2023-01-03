@@ -27,7 +27,7 @@ $$
 Reacción
 
 $$
-2A\Rightarrow B\\
+2A\Rightarrow B
 $$
 
 $$
@@ -76,23 +76,31 @@ $$
 
 Transformando a variables desviación y reemplazando la ecuación (1)
 
+<div>
 $$
-C'_{A0}F-C'_AF-\big[2C_{As}(C_A-C_{As})\big]kV=V \frac{d(C'_A)}{dt}
+C'_{A0}F-C'_AF-\left[2C_{As}(C_A-C_{As})\right]kV=V \frac{d(C'_A)}{dt}
 $$
+</div>
 
+<div>
 $$
 C'_{A0}F-C'_AF-2C_{As}(C'_A)kV=V \frac{d(C'_A)}{dt}
 $$
+</div>
 
 Aplicando la transformada de Laplace y despejando y sabiendo que $C'_A(t=0) = 0$
 
-$$
-C'_{A0}(s)F-C'_A(s)F-2C_{As}C'_A(s)kV=V (sC'_A(s)-C'_A(t=0))
-$$
+<div>
+   $$
+   C'_{A0}(s)F-C'_A(s)F-2C_{As}C'_A(s)kV=V (sC'_A(s)-C'_A(t=0))
+   $$
+</div>
 
-$$
-FC'_{A0}(s)-FC'_A(s)-2C_{As}kVC'_A(s)=V sC'_A(s)\space\space\space\space\space\textbf{... (4)}
-$$
+<div>
+   $$
+   FC'_{A0}(s)-FC'_A(s)-2C_{As}kVC'_A(s)=V sC'_A(s)\space\space\space\space\space\textbf{... (4)}
+   $$
+</div>
 
 Para simplificar el manejo de la ecuación (4) necesitamos reemplazar datos, pero nos falta conocer un dato $C_{As}$, para hallar utilizamos la ecuación (3), conociendo que: $k = 2;\space\space$ $C_{A0s} = 1;\space\space$ $V=50\space\space$ y $\space F= 5$
 
@@ -115,6 +123,7 @@ $$
 C_{As}=0.2
 $$
 Reemplazando en la ecuación (4)
+
 $$
 5C'_{A0}(s)-5C'_A(s)-2\times 0.2\times 2\times 50\times C'_A(s)=50\times sC'_A(s)
 $$
@@ -123,25 +132,29 @@ $$
 C'_{A0}(s)-9C'_A(s)=10 sC'_A(s)
 $$
 
-$$
-\mathbf{\frac{C'_{A}(s)}{C'_{A0}(s)}=\frac{1}{10s+9}}\space\space\space\space\space\textbf{... (5)}
-$$
+<div>
+   $$
+   \mathbf{\frac{C'_{A}(s)}{C'_{A0}(s)}=\frac{1}{10s+9}}\space\space\space\space\space\textbf{... (5)}
+   $$
+</div>
 
 Describiendo la perturbación
 
-$$
-C'_{A0}(t)=C_{A0}-C_{A0s}=
-\begin{cases}
-   1 - 1 &\text{si } t < 0 \\
-   2 - 1 \space\ mol/L &\text{si } t>0\\
-\end{cases}
-$$
+<div>
+   $$
+   C'_{A0}(t)=C_{A0}-C_{A0s} =
+   \begin{cases}
+      1 - 1 &\text{si } t < 0 \
+      2 - 1 \space\ mol/L &\text{si } t>0 \
+   \end{cases}
+   $$
+</div>
 
 $$
 C'_{A0}(t)=
 \begin{cases}
    0 &\text{si } t < 0 \\
-   1 \space\ mol/L &\text{si } t>0\\
+   1 \space\ mol/L &\text{si } t>0 \\
 \end{cases}
 $$
 
@@ -157,9 +170,11 @@ $$
 
 Reemplazando en la ecuación (5)
 
-$$
-C'_{A}(s)=C'_{A0}\frac{1}{10s+9}
-$$
+<div>
+   $$
+   C'_{A}(s)=C'_{A0}\frac{1}{10s+9}
+   $$
+</div>
 
 $$
 C'_{A}(s)=\frac{1}{s(10s+9)}
@@ -191,10 +206,11 @@ $$
 
 Hallando la concentración cuando t = 1 min
 
-$$
-C_A(t=1) = C'_A(t=1)+C_{As}
-
-$$
+<div>
+   $$
+   C_A(t=1) = C'_A(t=1)+C_{As}
+   $$
+</div>
 
 $$
 C_A(t=1)=\frac{1}{9}(1-e^{-9/10})+0.2
