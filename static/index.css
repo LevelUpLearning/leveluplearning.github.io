@@ -1,0 +1,23 @@
+.card-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: auto auto;
+    gap: 15px;
+    padding: 15px;
+    align-items: flex-start;
+    
+  }
+
+  .card {
+
+    padding: 10px;
+    
+    
+  }
+
+  .card-text {
+    display:inline-block;
+  }
+  .card>img{
+    border-radius: 50%;
+  }
