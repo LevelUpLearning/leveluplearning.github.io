@@ -2,8 +2,8 @@
 title: Solucionario Control Automático
 menu:
     main:
+        parent: Solucionarios
         name: Solucionario Control Automático
-        identifier: solu
-        weight: 130
+        
 type: docs
 ---

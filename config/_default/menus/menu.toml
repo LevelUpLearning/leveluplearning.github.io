@@ -8,6 +8,17 @@
   url = "post/rich-content/"
   weight = -109
 
+[[main]]
+  name = "Solucionarios"
+  identifier = "Solucionarios"
+  weight = -100
+
+[[main]]
+  parent = "Solucionarios"
+  name ="Solu libro"
+  url = "https://leveluplearning.github.io/solucontrol/"
+  weight = -108
+
 # Submenus are done this way: parent -> identifier
 #[[main]]
 #  name = "Links"
